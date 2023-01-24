@@ -6,48 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: 'hsl(30, 38%, 92%)',
+          },
+          fontFamily: {
+            'mont': ['Montserrat', 'sans-serif'],
+            'fra': ['Fraunces', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
   <title>Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
-<body class="bg-amber-50">
-  <div class="w-full h-screen flex justify-center items-center">
-    <div class="">
-      <img src="./images/image-product-desktop.jpg" alt="">
-    </div>
-    <div class="">
-      <h2 class="">Preview</h2>
+<body class="bg-cream">
+  <div class="max-sm:m-4 h-full sm:h-screen flex justify-center items-center">
+    <div class="max-sm:flex-col w-full sm:w-1/2 bg-white flex rounded-2xl shadow-xl md:w-2/3 ">
+      <div class="max-sm:w-full sm:w-1/2">
+        <img class="max-sm:hidden sm:w-full rounded-l-2xl" src="./images/image-product-desktop.jpg" alt="">
+        <img class="w-full rounded-t-2xl sm:hidden" src="./images/image-product-mobile.jpg" alt="">
+      </div>
+      <div class="max-sm:w-full p-4 sm:w-1/2 p-8 mt-4">
+        <h2 class="max-sm:mb-4 sm:uppercase text-gray-400 tracking-[.50em] mb-4 font-mont">perfume</h2>
 
-      <h1>Gabrielle Essence Eau De Parfum</h1>
+        <h1 class="max-sm:mb-4 text-4xl sm:font-fra text-3xl mb-8">Gabrielle Essence Eau De Parfum</h1>
 
-      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.</p> 
+        <p class="text-lg mb-8 text-gray-400">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
 
-      $149.99
-      $169.99
+        <div class="flex justify-between items-center mb-12 max-sm:justify-start gap-8">
+          <span class="text-3xl font-fra text-teal-800">$149.99</span>
+          <span class="line-through text-gray-400">$169.99</span>
+        </div>
 
-      Add to Cart
+        <div class="flex justify-center">
+          <button
+            class="w-full bg-teal-800 hover:bg-teal-600 text-white py-3 rounded-xl font-mont max-sm:w-full rounded-xl "><img
+              class="inline px-4" src="./images/icon-cart.svg" alt=""> Add to Cart</button>
+        </div>
+      </div>
     </div>
   </div>
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="text-center">
+    Challenge by <a class="text-blue-700" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a class="text-blue-700" href="#">Fabricio Velasco</a>.
   </div>
 </body>
 
