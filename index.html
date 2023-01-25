@@ -32,39 +32,33 @@
   <title>Product preview card component</title>
 </head>
 
-<body class="bg-cream">
-  <div class="max-sm:m-4 h-full sm:h-screen flex justify-center items-center">
-    <div class="max-sm:flex-col w-full sm:w-1/2 bg-white flex rounded-2xl shadow-xl md:w-2/3 ">
-      <div class="max-sm:w-full sm:w-1/2">
-        <img class="max-sm:hidden sm:w-full rounded-l-2xl" src="./images/image-product-desktop.jpg" alt="">
+<body>
+  <div class="conatainer bg-cream w-screen h-screen flex justify-center items-center">
+    <div class="max-w-lg h-auto flex bg-white rounded-2xl shadow-xl max-sm:flex-col mx-4">
+      <div class="w-1/2 max-sm:w-full">
+        <img class="w-full h-full rounded-l-2xl max-sm:hidden" src="./images/image-product-desktop.jpg" alt="">
         <img class="w-full rounded-t-2xl sm:hidden" src="./images/image-product-mobile.jpg" alt="">
       </div>
-      <div class="max-sm:w-full p-4 sm:w-1/2 p-8 mt-4">
-        <h2 class="max-sm:mb-4 sm:uppercase text-gray-400 tracking-[.50em] mb-4 font-mont">perfume</h2>
+      <div class="w-1/2 p-4 max-sm:w-full">
+        <h3 class="uppercase text-gray-400 font-mont tracking-[.50em] py-2">perfume</h3>
 
-        <h1 class="max-sm:mb-4 text-4xl sm:font-fra text-3xl mb-8">Gabrielle Essence Eau De Parfum</h1>
+        <h1 class="font-fra text-4xl">Gabrielle Essence Eau De Parfum</h1>
 
-        <p class="text-lg mb-8 text-gray-400">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        <p class="text-gray-400 text-lg py-2">A floral, solar and voluptuous interpretation composed by Olivier Polge,
           Perfumer-Creator for the House of CHANEL.</p>
-
-        <div class="flex justify-between items-center mb-12 max-sm:justify-start gap-8">
+        <div class="flex justify-between items-center py-2">
           <span class="text-3xl font-fra text-teal-800">$149.99</span>
           <span class="line-through text-gray-400">$169.99</span>
         </div>
 
-        <div class="flex justify-center">
-          <button
-            class="w-full bg-teal-800 hover:bg-teal-600 text-white py-3 rounded-xl font-mont max-sm:w-full rounded-xl "><img
-              class="inline px-4" src="./images/icon-cart.svg" alt=""> Add to Cart</button>
-        </div>
+        <button
+          class="w-full bg-teal-800 hover:bg-teal-600 text-white rounded-xl font-mont my-4 flex justify-center items-center p-2"><img
+            class="px-2" src="./images/icon-cart.svg" alt=""> Add to Cart</button>
       </div>
     </div>
   </div>
-  <div class="text-center">
-    Challenge by <a class="text-blue-700" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-      Mentor</a>.
-    Coded by <a class="text-blue-700" href="#">Fabricio Velasco</a>.
-  </div>
+
+
 </body>
 
 </html>
